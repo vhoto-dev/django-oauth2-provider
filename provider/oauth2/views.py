@@ -104,7 +104,7 @@ class AccessTokenView(AccessTokenView):
                 'refresh_token': access_token.refresh_token.token,
                 'scope': ' '.join(scope.names(access_token.scope)),
                 'token_type': 'Bearer',
-            }), mimetype='application/json'
+            }), content_type='application/json'
         )
 
     def get_access_token(self, request, user, scope, client):
